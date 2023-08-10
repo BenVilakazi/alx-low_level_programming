@@ -10,21 +10,15 @@
  */
 int main(void)
 {
-	// Print the size of a char
 	printf("Size of a char: %i byte(s)\n", sizeof(char));
 
-	// Print the size of an int
 	printf("Size of an int: %i byte(s)\n", sizeof(int));
 
-	// Print the size of a long int
 	printf("Size of a long int: %i byte(s)\n", sizeof(long int));
 
-	// Print the size of a long long int
 	printf("Size of a long long int: %i byte(s)\n", sizeof(long long int));
 
-	// Print the size of a float
 	printf("Size of a float: %i byte(s)\n", sizeof(float));
 
 	return (0);
 }
-
