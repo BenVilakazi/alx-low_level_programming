@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - (Start) returns every combination of 2 & 2 digits
  * Return: 0 (Success execution)
@@ -44,4 +43,3 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
-
