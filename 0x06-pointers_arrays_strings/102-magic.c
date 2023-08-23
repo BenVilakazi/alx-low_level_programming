@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main(void)
 {
   int n;
@@ -10,12 +11,13 @@ int main(void)
   /*
    * write your line of code here...
    * Remember:
-   * - you're not allowed to use a
-   * - you're not allowed to modify p
+   * - you arent allowed to use a
+   * - you arent allowed to modify p
    * - only one statement
-   * - you're not allowed to code anything other than this line of code
+   * - you arent allowed to code anything other than this line of code
    */
   *(p + 5) = 98;
+  /* ...so that this prints 98\n */
   printf("a[2] = %d\n", a[2]);
   return (0);
 }
