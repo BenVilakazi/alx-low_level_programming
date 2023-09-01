@@ -1,29 +1,24 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 /**
- * main - prints all args entered.
- * @argc: type int args
- * @argv: type char args of str.
- * Return: if not entered 2 args, return error
+ * main - adds all + numbers and prints them
+ * @argc: argc
+ * @argv: argv
+ * Return: 0 if successful else 1 if invalid argument
  */
 int main(int argc, char *argv[])
-	{
-		int i, j, sum = 0;
+{
+	int i, j, res = 0;
 
+	if (argc > 1)
 		for (i = 1; i < argc; i++)
 		{
-			for (j = 0; argv[i][j] != '\0'; j++)
-			{
-				if (!isdigit(argv[i][j]))
-				{
-					printf("Error\n");
-					return (1);
-				}
-			}
-			sum += atoi(argv[i]);
+			for (j = 0; argv[i][j]; j++)
+				if (argv[i][j] < '0' || argv[i][j] > '9')
+					return (printf("Error\n"), 1);
+			res += atoi(argv[i]);
 		}
-		printf("%d\n", sum);
-
-		return (0);
+	printf("%i\n", res);
+	return (0);
 }

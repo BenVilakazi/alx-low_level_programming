@@ -1,15 +1,14 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 /**
- * main - prints name followed by newline.
- * @argc: type int args
- * @argv: type char args of str.
- * Return: none
+ * main - prints name followed by newline
+ * @argc: argc
+ * @argv: argv
+ * Return: 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	(void) argc;
+	(void)argc;
 	printf("%s\n", argv[0]);
-
 	return (0);
 }

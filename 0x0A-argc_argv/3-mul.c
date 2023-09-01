@@ -1,27 +1,22 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * main - prints all arguments received.
- * @argc: type int argument
- * @argv: type char argument of string.
- * Return: if not receive 2 arg, rt error
+ * main - product of 2 num
+ * @argc: argc
+ * @argv: argv
+ * Return: 0
  */
 int main(int argc, char **argv)
 {
-	int x, y, diff;
-
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
-	diff = x * y;
-
-	printf("%i\n", diff);
-
+	else
+	{
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	}
 	return (0);
 }

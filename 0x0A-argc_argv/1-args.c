@@ -1,15 +1,14 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 /**
- * main - prints numb of args passed into it.
- * @argc: tye int args
- * @argv: type char argd of str
+ * main - prints the num of args entered
+ * @argc: argc
+ * @argv: argv
  * Return: 0
  */
 int main(int argc, char **argv)
 {
-	(void) argv; /*Ignore argv*/
-	printf("%i\n", argc - 1);
-
+	(void)argv;
+	printf("%d\n", argc - 1);
 	return (0);
 }

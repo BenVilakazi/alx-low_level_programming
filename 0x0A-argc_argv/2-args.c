@@ -1,24 +1,18 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 /**
- * main - prints all args received.
- * @argc: type int args
- * @argv: type char args of str.
- * Return: none
+ * main - prints all args entered
+ * @argc: argc
+ * @argv: argv
+ * Return: 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	/*Declaring var*/
-	int count = 0;
+	int i;
 
-	if (argc > 0)
+	for (i = 0; i < argc; i++)
 	{
-		/*WHILE - print each args*/
-		while (count < argc)
-		{
-			printf("%s\n", argv[count]);
-			count++;
-		}
+		printf("%s\n", argv[i]);
 	}
 	return (0);
 }
