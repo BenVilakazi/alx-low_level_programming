@@ -1,101 +1,92 @@
+#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 #include "main.h"
 /**
- * _isdigit - checks if char is digit
- * @y: char checked
- * Return: 1 if digit, 0 otherwise
+ * is_digit - checks str
+ * @a: str evaluated
+ * Return: 0 success, else 1
  */
-int _isdigit(int y)
+int is_digit(char *a)
 {
-	return (y >= '0' && y <= '9');
-}
-/**
- * _strlen - returns strlen of y
- * @b: strlen checked
- * Return: int strlen
- */
-int _strlen(char *b)
-{
-	int i = 0;
+	int b = 0;
 
-	while (*b++)
-		i++;
-	return (i);
-}
-/**
- * big_multiply - multiply two str
- * @a1: 1st num str
- * @a2: 2nd num str
- * Return: product of num str
- */
-char *big_multiply(char *a1, char *a2)
-{
-	char *r;
-	int l1, l2, y, b, y, x;
-
-	l1 = _strlen(a1);
-	l2 = _strlen(a2);
-	r = malloc(y = x = l1 + l2);
-	if (!r)
-		printf("Error\n"), exit(98);
-	while (y--)
-		r[y] = 0;
-	for (l1--; l1 >= 0; l1--)
+	while (a[b])
 	{
-		if (!_isdigit(a1[l1]))
-		{
-			free(r);
-			printf("Error\n"), exit(98);
-		}
-		y = a1[l1] - '0';
-		y = 0;
-		for (l2 = _strlen(a2) - 1; l2 >= 0; l2--)
-		{
-			if (!_isdigit(a2[l2]))
-			{
-				free(r);
-				printf("Error\n"), exit(98);
-			}
-			b = a2[l2] - '0';
-			y += r[l1 + l2 + 1] + (y * b);
-			r[l1 + l2 + 1] = y % 10;
-			y /= 10;
-		}
-		if (y)
-			r[l1 + l2 + 1] += y;
+		if (a[b] < '0' || a[b] > '9')
+			return (0);
+		b++;
 	}
-	return (r);
+	return (1);
 }
 /**
- * main - multiply two str
- * @argc: argsc
+ * _strlen - returns strlen
+ * @s: str evaluated
+ * Return: strlen
+ */
+int _strlen(char *a)
+{
+	int b = 0;
+
+	while (a[b] != '\0')
+	{
+		b++;
+	}
+	return (b);
+}
+/**
+ * errors - error handling
+ */
+void errors(void)
+{
+	printf("Error\n");
+	exit(98);
+}
+/**
+ * main - product of 2 num
+ * @argc: argc
  * @argv: argv
- * Return: Always 0.
+ * Return: 0 (Success)
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	char *r;
-	int y, y, x;
+	char *a1, *a2;
+	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
 
-	if (argc != 3)
-		printf("Error\n"), exit(98);
-
-	x = _strlen(argv[1]) + _strlen(argv[2]);
-	r = big_multiply(argv[1], argv[2]);
-	y = 0;
-	y = 0;
-	while (y < x)
+	a1 = argv[1], a2 = argv[2];
+	if (argc != 3 || !is_digit(a1) || !is_digit(a2))
+		errors();
+	len1 = _strlen(a1);
+	len2 = _strlen(a2);
+	len = len1 + len2 + 1;
+	result = malloc(sizeof(int) * len);
+	if (!result)
+		return (1);
+	for (b = 0; b <= len1 + len2; b++)
+		result[b] = 0;
+	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
-		if (r[y])
-			y = 1;
-		if (y)
-			_putchar(r[y] + '0');
-		y++;
+		digit1 = s1[len1] - '0';
+		carry = 0;
+		for (len2 = _strlen(a2) - 1; len2 >= 0; len2--)
+		{
+			digit2 = s2[len2] - '0';
+			carry += result[len1 + len2 + 1] + (digit1 * digit2);
+			result[len1 + len2 + 1] = carry % 10;
+			carry /= 10;
+		}
+		if (carry > 0)
+			result[len1 + len2 + 1] += carry;
 	}
-	if (!y)
+	for (b = 0; b < len - 1; b++)
+	{
+		if (result[b])
+			a = 1;
+		if (a)
+			_putchar(result[b] + '0');
+	}
+	if (!a)
 		_putchar('0');
 	_putchar('\n');
-	free(r);
+	free(result);
 	return (0);
 }
