@@ -11,6 +11,7 @@ void *_realloc(void *ptr, unsigned int a, unsigned int b);
 int _strlen(char *);
 char *_memset(char *s, char b, unsigned int n);
 char *_memcpy(char *dest, char *src, unsigned int n);
-int onlyNumbers(char *c);
-void multiply(char* a1, char* a2);
+void errors(void);
+int _strlen(char *a);
+int is_digit(char *a);
 #endif
