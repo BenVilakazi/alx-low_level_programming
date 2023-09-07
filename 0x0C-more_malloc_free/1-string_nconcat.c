@@ -31,10 +31,9 @@ char *string_nconcat(char *a, char *b, unsigned int n)
 	ptr[i] = 0;
 	return (ptr);
 }
-
 /**
  * _strlen - returns strlen
- * @str: str
+ * @str: returns str 
  * Return: strlen
  */
 int _strlen(char *str)
