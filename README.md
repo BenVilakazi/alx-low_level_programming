@@ -14,3 +14,14 @@ Each directory contains the low level projects and code that I've written during
 | [0x05. Pointers arrays strings ](./0x05-pointers_arrays_strings) | Pointers, arrays and strings |
 | [0x06. More pointers, arrays, strings ](./0x06-pointers_arrays_strings) | More pointers, arrays, strings |
 | [0x07. Even more pointers, arrays, strings ](./0x07-pointers_arrays_strings) | Even more pointers, arrays, strings |
+| [0x08. Recursion ](./0x08-recursion) | Recursion |
+| [0x09. C static libraries ](./0x09-static_libraries) | static libraries |
+| [0x0A. Argc, argv ](./0x0A-argc_argv) | Argc, argv |
+| [0x0B. Malloc free ](./0x0B-malloc_free) | Malloc free |
+| [0x0C. More malloc free ](./0x0C-more_malloc_free) | More malloc free |
+| [0x0D. Preprocessor ](./0x0D-preprocessor) | Preprocessor |
+| [0x0E. Srtuctures, typedef ](./0x0E-structures_typedef) | Srtuctures, typedef |
+| [0x0F. C function, pointers ](./0x0F-function_pointers) | function, pointers |
+| [0x10. Variadic functions ](./0x10-variadic_functions) | Variadic functions |
+| [0x12. Singly linked lists ](./0x12-singly_linked_lists) | Singly linked lists |
+| [0x13. More singly linked lists ](./0x13-more_singly_linked_lists) | More singly linked lists |
