@@ -1,42 +1,31 @@
 #include "lists.h"
 /**
-* print_listint_safe - prints list of int
-* @head: ptr to node
-* Return: num of nodes
-**/
+ * print_listint_safe - prints linked list
+ * @head: beginning of linked list
+ * Return: number of elements in linked list
+ */
 size_t print_listint_safe(const listint_t *head)
 {
-const listint_t *temp = head;
-size_t lenght = 0;
-int iterator = 0, list_len = 0;
+	size_t i = 0, j;
+	const listint_t *temp_h = head, *check_next;
 
-if (head == NULL)
-exit(98);
-
-list_len = list_lenght(head);
-while (temp != NULL)
-{
-printf("%d [%p] %d\n", list_len, (void *)temp, temp->n);
-temp = temp->next;
-iterator++;
-lenght++;
-if (iterator == list_len)
-temp = NULL;
-}
-return (lenght);
-}
-/**
-* list_lenght - prints list of int
-* @h: ptr to node
-* Return: num of nodes
-**/
-int list_lenght(const listint_t *h)
-{
-size_t lenght = 0;
-
-while (h != NULL)
-{lenght++;
-h = h->next;
-}
-return (lenght);
+	while (temp_h)
+	{
+		printf("[%p] %d\n", (void *)temp_h, temp_h->n);
+		i++;
+		temp_h = temp_h->next;
+		check_next = head;
+		j = 0;
+		while (j < i)
+		{
+			if (temp_h == check_next)
+			{
+				printf("-> [%p] %d\n", (void *)temp_h, temp_h->n);
+				return (i);
+			}
+			check_next = check_next->next;
+			j++;
+		}
+	}
+	return (i);
 }
