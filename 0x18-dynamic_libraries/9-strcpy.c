@@ -1,21 +1,20 @@
 #include "main.h"
 /**
- * _strcpy - Copy paste string
- * @dest: destination
- * @src: source
- *
- * Return: destination
+ * _strcpy - copies the string with \0 to the buffer
+ * @dest: pointer to dest
+ * @src: pointer to string
+ * Return: the pointer to dest
  */
 char *_strcpy(char *dest, char *src)
 {
-	int inc = 0;
+	int i;
 
-	while (*(src + inc) != '\0')
+	i = 0;
+	while (*(src + i) != '\0')
 	{
-		*(dest + inc) = *(src + inc);
-		inc++;
+		*(dest + i) = *(src + i);
+		i++;
 	}
-	*(dest + inc) = '\0';
-
+	*(dest + i) = '\0';
 	return (dest);
 }
