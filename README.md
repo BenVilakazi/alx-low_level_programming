@@ -29,6 +29,7 @@ Each directory contains the low level projects and code that I've written during
 | [0x15. File input/optput ](./0x15-file_io) | File input/optput |
 | [0x17. Doubly linked lists ](./0x17-doubly_linked_lists) | doubly linked list node structure for ALX project |
 | [0x18. Dynamic libraries ](./0x18-dynamic_libraries) | What is a dynamic library, how does it work, how to create one, and how to use it |
+| .[0x19. C - Stacks, Queues - LIFO, FIFO ] (./0x19. C - Stacks, Queues - LIFO, FIFO) | Dynamic lib
 | [0x1A. Hash tables ](./0x1A-hash_tables) | Hash tables |
 | [0x1C. Makefiles ](./0x1C-makefiles) | Makefiles |
 | [0x1E. Search algorithms ](./0x1E-search_algorithms) | Search algorithms |
